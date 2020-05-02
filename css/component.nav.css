@@ -5,24 +5,33 @@
 */
 
 .c-nav {
+    font-size: 18px;
+    line-height: 24px;
 }
 
 .c-nav__link {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 8px 0;
 }
 
 .c-nav__link,
 .c-nav__link:visited,
 .c-nav__link:active {
+    color: #202024;
 }
 
 .c-nav__link:hover,
 .c-nav__link:focus {
+    color: #5051db;
 }
 
 @media (min-width: 768px) {
     .c-nav__list {
+        display: flex;
     }
 
     .c-nav__link {
+        padding: 8px 16px;
     }
 }
