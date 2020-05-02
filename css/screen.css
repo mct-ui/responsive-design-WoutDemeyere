@@ -1,6 +1,27 @@
 /*------------------------------------*\
   #FONTS
 \*------------------------------------*/
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 600;
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+}
+
 
 /*------------------------------------*\
   #GENERIC
@@ -15,8 +36,8 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    font-family: "HK Grotesk Web", Helvetica, arial, sans-serif;
+    color: #202024;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -28,6 +49,13 @@ html {
     box-sizing: inherit;
 }
 
+@media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -36,7 +64,7 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
+    background: #5051DB;
     color: white;
     text-shadow: none;
 }
@@ -61,6 +89,12 @@ img {
     ---
     Default markup for typographic elements
 */
+
+h1,
+h2,
+h3 {
+    font-weight: 200;
+}
 
 h1 {
     font-size: 36px;
@@ -194,7 +228,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em; /* 90 * 16px = 1440px */
+    max-width: 70.5em; /* 90 * 16px = 1440px */
 }
 
 /*
@@ -317,6 +351,26 @@ a:focus {
 /*------------------------------------*\
   #COMPONENTS
 \*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 32px;
+}
+
+.c-logo__symbol {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .c-logo {
+        height: 40px;
+    }
+}
 
 /*------------------------------------*\
   #UTILITIES
@@ -553,6 +607,24 @@ a:focus {
     .u-5-of-6-bp4 {
         flex-basis: calc(100% / 6 * 5) !important;
     }
+}
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-primary-light {
+    color: #5051DB;
+}
+
+.u-color-primary-base {
+    
+}
+
+.u-color-primary-dark {
+    color: #3E3EA8;
 }
 
 /*------------------------------------*\
