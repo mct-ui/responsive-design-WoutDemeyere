@@ -200,6 +200,12 @@ a:focus {
     display: flow-root;
 }
 
+/* color modifiers */
+
+.o-row--neutral-x-light {
+    background-color: #F7F7FA;
+}
+
 /* size modifiers */
 
 .o-row--lg {
